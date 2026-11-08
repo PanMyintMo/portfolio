@@ -355,53 +355,52 @@ const projects = <AppProject>[
     status: 'TestFlight / live',
     year: '2026',
   ),
-  AppProject(
-    name: 'Hidayatul Quran',
-    role: 'Flutter · Full-stack Firebase',
+ 
+    AppProject(
+    name: 'The Queen',
+    role: 'Lead Flutter · GT multi-brand base',
     tagline:
-        'Read and listen to curated Quran books—offline-friendly with a built-in admin CMS.',
+        'Clinic member wallet for booking, point wallet, royalty rewards, and QR pay.',
     overview:
-        'Hidayatul Quran (com.hidayatul.quran_book) lets users browse categorized Islamic/Quran '
-        'books with PDF reading, audio listening, bookmarks, search, donations, and profile '
-        'settings. An admin dashboard manages books, categories, banners, users, donations, and '
-        'readings. Firebase is the source of truth, with a GitHub + jsDelivr public_data mirror '
-        'for regions where Firebase is hard to reach.',
+        'Live Great Time / Piti Pass member app for The Queen (com.greatetime.thequeen), built on the '
+        'shared React Native white-label codebase. Members use Firebase auth and a passcode '
+        'gate, then book services, shop packages, manage a point wallet (transfer, top-up, '
+        'MMQR, Quick Pay QR), and redeem royalty rewards against Piti Pass + encrypted GT+ GraphQL.',
     features: [
-      'Bottom tabs: Home, Bookmark, Setting, Profile',
-      'Home: banners, book types, new/popular books, categories, search',
-      'PDF reader (Syncfusion SfPdfViewer) with zoom and paging',
-      'Audio listen via just_audio / audio_service',
-      'Bookmarks; donate page; edit profile; intro/onboarding',
-      'Auth: email/password + phone (Firebase Auth); logout / delete account',
-      'Theme light / dark / system; locales English, Myanmar, Arabic',
-      'Drawer: language, settings, theme, contact, help, about, share, store review',
-      'Admin CMS: Categories, Posts (books), Readings, Users, Banners, Donations',
-      'Offline cache + jsDelivr CDN mirror; GitHub Actions sync from Firebase every 6h',
+      'Bottom tabs: Home, Royalty, Book, Point Wallet, Messages, Me',
+      'Home offer categories and offer detail',
+      'Book public services, create/edit appointments, booking success & member agenda',
+      'Point wallet: transfer, history, Quick Pay QR, top-up (MMQR / A+)',
+      'In-app shopping for services & packages with passcode checkout',
+      'Royalty: points, rewards redeem, member benefits, reward history, PDF benefits viewer',
+      'Messages / push notifications with brand Firebase topics',
+      'Me: edit/delete member, orders & purchased services, language, change/forgot passcode (OTP)',
+      'Firebase auth + passcode gate before wallet and purchase flows',
+      'Locales: Myanmar, Zawgyi, English, Chinese',
     ],
     tech: [
       'Flutter',
-      'Provider',
-      'Firebase Auth / Realtime Database / Storage',
+      'Riverpod',
+      'go_router',
+      'GraphQL (Piti Pass + encrypted GT+ API)',
+      'Firebase',
       'Hive',
-      'Syncfusion PDF',
-      'just_audio',
-      'easy_localization',
-      'GitHub Actions',
+      'Dio',
+      'Certificate pinning',
     ],
     highlights: [
-      'Firebase → local cache → CDN mirror resilience',
-      'Admin and reader experiences in one app',
-      'public_data mirror: github.com/PanMyintMo/quran_book',
-      'Version 1.0.0+10',
+      'Migrated from React Native GT → Flutter clean architecture',
+      'Compile-time brands via --dart-define=BRAND / ENV',
+      'TestFlight 9.2.2 · App Store Connect uploads',
+      '~480 Dart files · sage & cream Dermaluxe UI',
     ],
-    accent: 0xFF1B6B4A,
-    platforms: ['iOS', 'Android', 'Web'],
-    stack: ProjectStack.fullstack,
-    githubUrl: 'https://github.com/PanMyintMo/quran_book',
-    status: 'Live product',
-    year: '2025–2026',
+    accent: 0xFF5F7A63,
+    platforms: ['iOS', 'Android'],
+    stack: ProjectStack.flutter,
+    status: 'TestFlight / live',
+    year: '2026',
   ),
-
+ 
   // ——— Flutter staff / ops ———
   AppProject(
     name: 'GT Business',
@@ -489,15 +488,13 @@ const projects = <AppProject>[
     year: '2025–2026',
   ),
   AppProject(
-    name: 'Flutter Clean Base',
+    name: 'Flutter Clean Base Code for  multi-brand',
     role: 'Architecture starter',
     tagline:
-        'Reusable clean-architecture Flutter base with auth, networking, and device security.',
+        'Reusable clean-architecture Flutter base with auth, networking, and device security for multi-brand.',
     overview:
         'Layered Flutter starter used as a foundation for production clients. Demo flows cover '
-        'login/register against DummyJSON, user CRUD, and a profile map with geolocation. The '
-        'core ships Dio interceptors, secure storage, encryption, certificate pinning, '
-        'root/jailbreak checks, env flavors, RBAC stubs, and Hive caching with Riverpod DI.',
+        'login/register against DummyJSON, user CRUD, and a profile map with geolocation. The core ships Dio interceptors, secure storage, encryption, certificate pinning, root/jailbreak checks, env flavors, RBAC stubs, and Hive caching with Riverpod DI.',
     features: [
       'Auth screen with Login / Register tabs (DummyJSON login; register stubbed)',
       'User list plus create/edit user screens',
